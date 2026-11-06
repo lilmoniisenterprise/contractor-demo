@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a Free Estimate | Granitebrook Builders — Construction Quote Request</title>
+  <meta name="description" content="Request a free construction estimate from Granitebrook Builders (demo). Share your project type, property, location, budget, and timeline, and use the ballpark cost estimator.">
+  <!-- PLACEHOLDER: replace the domain below with the live domain before launch -->
+  <link rel="canonical" href="https://contractor.virellionapex.com/quote.html">
+  <!-- Demo site: kept out of search results. For a real client, change to "index, follow". -->
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#11151b">
+  <meta name="author" content="Virellion Apex">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Granitebrook Builders (Demo)">
+  <meta property="og:title" content="Request a Free Estimate | Granitebrook Builders">
+  <meta property="og:description" content="Request a free construction estimate from Granitebrook Builders (demo). Share your project type, property, location, budget, and timeline, and use the ballpark cost estimator.">
+  <meta property="og:url" content="https://contractor.virellionapex.com/quote.html">
+  <meta property="og:image" content="https://contractor.virellionapex.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Granitebrook Builders demonstration website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Request a Free Estimate | Granitebrook Builders">
+  <meta name="twitter:description" content="A demonstration contractor website by Virellion Apex.">
+  <meta name="twitter:image" content="https://contractor.virellionapex.com/images/og-image.jpg">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="demo-bar" role="note">Demonstration website by <a href="https://virellionapex.com">Virellion Apex</a> — fictional company. Forms run in demo mode and send nothing.</div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Granitebrook Builders — home">
+        <img src="images/logo.png" alt="" width="44" height="44">
+        <span class="brand-text"><span class="brand-name">Granitebrook</span><span class="brand-sub">Builders</span></span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="testimonials.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary btn-sm nav-cta" href="quote.html">Free Estimate</a>
+        <p class="nav-phone">Call (555) 014-2290 · Mon–Sat</p>
+      </nav>
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span class="bars"></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=70')">
+      <div class="container">
+        <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Request a Quote</li></ol>
+        <p class="eyebrow">Free estimate</p>
+        <h1>Request a project quote</h1>
+        <p>Three quick steps. We typically respond within one business day with next steps and a site-visit time.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-label="Quote request">
+      <div class="container quote-layout" style="display:grid;grid-template-columns:1.6fr 1fr;gap:2rem;align-items:start">
+        <div class="form-card">
+          <div class="demo-note" role="note">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+            <span><strong>Demonstration mode:</strong> this form validates your entries and shows a confirmation, but nothing is transmitted to anyone. Please don't enter sensitive personal information.</span>
+          </div>
+          <p id="draft-notice" class="fine-print" hidden>We restored a draft saved in this browser. <button type="button" id="clear-draft" class="link-arrow" style="background:none;border-top:0;border-left:0;border-right:0;cursor:pointer;font-size:.85rem">Clear draft</button></p>
+
+          <ol class="stepper" aria-label="Quote request progress">
+            <li>Project</li>
+            <li>Details</li>
+            <li>Contact</li>
+          </ol>
+          <p class="sr-only" id="step-status" aria-live="polite"></p>
+          <div class="form-alert error" id="quote-alert" role="alert"></div>
+
+          <form id="quote-form" novalidate>
+            <!-- STEP 1 -->
+            <div class="form-step" data-step="1">
+              <h2>About your project</h2>
+              <p>Tell us what you are planning to build or improve.</p>
+              <div class="form-grid">
+                <fieldset class="field full" style="border:0;padding:0;margin:0">
+                  <legend>Project type<span class="req" aria-hidden="true">*</span></legend>
+                  <div class="choice-grid" style="margin-top:.5rem">
+                    <div class="choice"><input type="radio" id="pt-gc" name="project_type" value="general-contracting" required><label for="pt-gc"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg>General Contracting</label></div>
+                    <div class="choice"><input type="radio" id="pt-res" name="project_type" value="residential"><label for="pt-res"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>Residential Construction</label></div>
+                    <div class="choice"><input type="radio" id="pt-com" name="project_type" value="commercial"><label for="pt-com"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="3" width="16" height="18"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2"/></svg>Commercial Construction</label></div>
+                    <div class="choice"><input type="radio" id="pt-rem" name="project_type" value="remodeling"><label for="pt-rem"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>Remodeling</label></div>
+                    <div class="choice"><input type="radio" id="pt-ele" name="project_type" value="electrical"><label for="pt-ele"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Electrical</label></div>
+                    <div class="choice"><input type="radio" id="pt-plu" name="project_type" value="plumbing"><label for="pt-plu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h6v4H8v4a4 4 0 0 0 4 4h4v-2h4v6h-4v-2h-4a6 6 0 0 1-6-6V8H4z"/></svg>Plumbing</label></div>
+                    <div class="choice"><input type="radio" id="pt-roof" name="project_type" value="roofing"><label for="pt-roof"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 13L12 4l10 9"/><path d="M5 11v9h14v-9"/></svg>Roofing</label></div>
+                    <div class="choice"><input type="radio" id="pt-cus" name="project_type" value="custom"><label for="pt-cus"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/></svg>Custom Project</label></div>
+                  </div>
+                </fieldset>
+                <div class="field">
+                  <label for="property_type">Property type<span class="req" aria-hidden="true">*</span></label>
+                  <select id="property_type" name="property_type" required>
+                    <option value="">Select property type…</option>
+                    <option value="single-family">Single-family home</option>
+                    <option value="multi-family">Multi-family / duplex</option>
+                    <option value="condo">Condo / townhome</option>
+                    <option value="vacant-lot">Vacant lot (new build)</option>
+                    <option value="office">Commercial office</option>
+                    <option value="retail">Retail / restaurant</option>
+                    <option value="industrial">Industrial / warehouse</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="budget">Estimated budget<span class="req" aria-hidden="true">*</span></label>
+                  <select id="budget" name="budget" required>
+                    <option value="">Select a range…</option>
+                    <option value="under-10k">Under $10,000</option>
+                    <option value="10-25k">$10,000 – $25,000</option>
+                    <option value="25-50k">$25,000 – $50,000</option>
+                    <option value="50-100k">$50,000 – $100,000</option>
+                    <option value="100-250k">$100,000 – $250,000</option>
+                    <option value="250-500k">$250,000 – $500,000</option>
+                    <option value="500k-plus">$500,000+</option>
+                    <option value="unsure">Not sure yet</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label for="project_location">Project location<span class="req" aria-hidden="true">*</span></label>
+                  <input id="project_location" name="project_location" type="text" required minlength="3" autocomplete="address-level2" placeholder="Street address, town, or ZIP" aria-describedby="loc-hint">
+                  <span class="hint" id="loc-hint">A town or ZIP is enough for now. Demo service area: Ashford County.</span>
+                </div>
+              </div>
+              <div class="form-nav">
+                <span></span>
+                <button class="btn btn-primary" type="button" data-next>Continue
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="form-step" data-step="2">
+              <h2>Project details</h2>
+              <p>The more you share, the more accurate our estimate will be.</p>
+              <div class="form-grid">
+                <div class="field full">
+                  <label for="description">Project description<span class="req" aria-hidden="true">*</span></label>
+                  <textarea id="description" name="description" required minlength="20" maxlength="2000" placeholder="e.g. Remodel a 12x14 kitchen: remove one wall, new cabinets and island, quartz counters, add recessed lighting." aria-describedby="desc-hint"></textarea>
+                  <div style="display:flex;justify-content:space-between;gap:1rem"><span class="hint" id="desc-hint">Minimum 20 characters.</span><span class="char-count" aria-hidden="true"></span></div>
+                </div>
+                <div class="field">
+                  <label for="timeline">Desired start <span class="optional">(optional)</span></label>
+                  <select id="timeline" name="timeline">
+                    <option value="">Select…</option>
+                    <option>As soon as possible</option>
+                    <option>Within 1–3 months</option>
+                    <option>Within 3–6 months</option>
+                    <option>6+ months / planning stage</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="consult_date">Preferred consultation date <span class="optional">(optional)</span></label>
+                  <input id="consult_date" name="consult_date" type="date" data-min-today>
+                </div>
+                <div class="field">
+                  <label for="consult_time">Preferred time of day <span class="optional">(optional)</span></label>
+                  <select id="consult_time" name="consult_time">
+                    <option value="">No preference</option>
+                    <option>Morning (8–11 AM)</option>
+                    <option>Midday (11 AM–2 PM)</option>
+                    <option>Afternoon (2–5 PM)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="has_plans">Do you have plans or drawings? <span class="optional">(optional)</span></label>
+                  <select id="has_plans" name="has_plans">
+                    <option value="">Select…</option>
+                    <option>Yes, complete drawings</option>
+                    <option>Rough sketches / ideas</option>
+                    <option>No — need design help</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-nav">
+                <button class="btn btn-outline" type="button" data-prev>Back</button>
+                <button class="btn btn-primary" type="button" data-next>Continue
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="form-step" data-step="3">
+              <h2>Your contact information</h2>
+              <p>We'll use this only to follow up about your estimate.</p>
+              <div class="form-grid">
+                <div class="field full">
+                  <label for="full_name">Full name<span class="req" aria-hidden="true">*</span></label>
+                  <input id="full_name" name="full_name" type="text" required minlength="2" autocomplete="name">
+                </div>
+                <div class="field">
+                  <label for="email">Email<span class="req" aria-hidden="true">*</span></label>
+                  <input id="email" name="email" type="email" required autocomplete="email" placeholder="name@example.com">
+                </div>
+                <div class="field">
+                  <label for="phone">Phone<span class="req" aria-hidden="true">*</span></label>
+                  <input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="(555) 123-4567">
+                </div>
+                <fieldset class="field full" style="border:0;padding:0;margin:0">
+                  <legend>Preferred contact method <span class="optional">(optional)</span></legend>
+                  <div class="segmented" style="margin-top:.4rem">
+                    <input type="radio" id="cm-phone" name="contact_method" value="Phone" checked><label for="cm-phone">Phone</label>
+                    <input type="radio" id="cm-email" name="contact_method" value="Email"><label for="cm-email">Email</label>
+                    <input type="radio" id="cm-text" name="contact_method" value="Text message"><label for="cm-text">Text</label>
+                  </div>
+                </fieldset>
+                <div class="field full">
+                  <label class="check"><input type="checkbox" name="consent" value="Yes" required> I agree to be contacted about this estimate request. I understand this is a demonstration and no information is sent.</label>
+                </div>
+                <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+              </div>
+              <div class="form-nav">
+                <button class="btn btn-outline" type="button" data-prev>Back</button>
+                <button class="btn btn-primary" type="submit">Submit Quote Request</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="confirmation" id="quote-confirmation" aria-live="polite">
+            <div class="check-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+            <h2>Thanks, <span data-first-name></span>!</h2>
+            <p>Your quote request passed validation. Reference number: <span class="ref-code"></span></p>
+            <div class="demo-note" style="text-align:left"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span><strong>Demonstration only — this request was not sent.</strong> On a live site it would be delivered securely to the contractor's inbox or CRM, and you would receive an email confirmation.</span></div>
+            <div class="summary"><h3 style="font-size:1.05rem">Request summary</h3><dl></dl></div>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+              <button class="btn btn-outline" type="button" id="quote-again">Start another request</button>
+              <a class="btn btn-dark" href="contact.html#schedule">Book a consultation time</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="estimator" id="estimator" aria-labelledby="est-title">
+          <p class="eyebrow">Ballpark estimator</p>
+          <h2 id="est-title">What might it cost?</h2>
+          <div class="stack">
+            <div class="field">
+              <label for="est-type">Project</label>
+              <select id="est-type">
+                <option value="kitchen">Kitchen remodel</option>
+                <option value="bathroom">Bathroom remodel</option>
+                <option value="addition">Home addition</option>
+                <option value="new-home">Custom new home</option>
+                <option value="roof">Roof replacement</option>
+                <option value="deck">Custom deck</option>
+                <option value="commercial-ti">Commercial build-out</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="est-size">Size: <span class="range-val" id="est-size-val">200</span> <span id="est-unit">sq ft</span></label>
+              <input id="est-size" type="range" min="60" max="600" step="10" value="200">
+            </div>
+            <fieldset class="field" style="border:0;padding:0;margin:0">
+              <legend style="color:#e6eaee">Finish level</legend>
+              <div class="segmented" style="border-color:#3a4756;margin-top:.4rem">
+                <input type="radio" id="fin-std" name="est-finish" value="standard"><label for="fin-std" style="border-color:#3a4756">Standard</label>
+                <input type="radio" id="fin-pre" name="est-finish" value="premium" checked><label for="fin-pre" style="border-color:#3a4756">Premium</label>
+                <input type="radio" id="fin-lux" name="est-finish" value="luxury"><label for="fin-lux">Luxury</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="est-output" aria-live="polite">
+            <div class="range">$0 – $0</div>
+            <small id="est-note"></small>
+          </div>
+          <button class="btn btn-primary btn-block" type="button" id="est-use" style="margin-top:1rem">Add to my request</button>
+          <p class="fine-print">Illustrative ranges for demonstration only — not a quote. Real pricing depends on site conditions, materials, and design.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="next-title">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">What happens next</p>
+          <h2 id="next-title">From request to estimate</h2>
+        </div>
+        <div class="process">
+          <div class="process-step reveal"><h3>We review</h3><p>A project manager reviews your request and any notes the same business day.</p></div>
+          <div class="process-step reveal"><h3>We call</h3><p>We confirm details and schedule a site visit at a time that works for you.</p></div>
+          <div class="process-step reveal"><h3>We measure</h3><p>On site, we assess conditions, take measurements, and discuss options.</p></div>
+          <div class="process-step reveal"><h3>You decide</h3><p>Receive a detailed, fixed-price proposal — with no pressure and no obligation.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Granitebrook Builders — home">
+            <img src="images/logo.png" alt="" width="44" height="44">
+            <span class="brand-text"><span class="brand-name">Granitebrook</span><span class="brand-sub">Builders</span></span>
+          </a>
+          <p>General contractor for residential, commercial, and remodeling projects across Ashford County.</p>
+          <a class="btn btn-primary btn-sm" href="quote.html">Get a Free Estimate</a>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="projects.html">Project Gallery</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="quote.html">Request a Quote</a></li>
+            <li><a href="contact.html">Contact &amp; Scheduling</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html#general-contracting">General Contracting</a></li>
+            <li><a href="services.html#residential">Residential</a></li>
+            <li><a href="services.html#commercial">Commercial</a></li>
+            <li><a href="services.html#remodeling">Remodeling</a></li>
+            <li><a href="services.html#roofing">Roofing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>(555) 014-2290 <span class="placeholder-note">(placeholder)</span></li>
+            <li>hello@granitebrook.example</li>
+            <li>1450 Foundry Row, Ashford</li>
+            <li>Mon–Fri 7 AM–6 PM · Sat 8 AM–1 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="disclaimer">This website is a demonstration project developed by Virellion Apex. Company identity, project examples, testimonials, and business details are fictional.</p>
+        <div class="va-credit">
+          <p><strong>Want a website like this for your business?</strong> Virellion Apex builds high-converting sites for contractors and service companies.</p>
+          <a class="btn btn-primary btn-sm" href="https://virellionapex.com">Request a Website</a>
+        </div>
+        <div class="footer-meta">
+          <span>© <span data-year>2026</span> Granitebrook Builders (fictional). Website by <a href="https://virellionapex.com">Virellion Apex</a>.</span>
+          <span>Photography via <a href="about.html#credits">Unsplash</a> · <a href="contact.html">Contact</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta" aria-label="Quick actions">
+    <a class="btn btn-ghost-light" href="tel:+15550142290">Call</a>
+    <a class="btn btn-primary" href="quote.html">Free Estimate</a>
+  </div>
+  <button class="to-top" type="button" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></button>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

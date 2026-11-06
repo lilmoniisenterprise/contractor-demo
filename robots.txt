@@ -1,0 +1,6 @@
+# Demonstration site — pages also carry <meta name="robots" content="noindex">.
+# For a real client launch: remove the noindex meta tags and change this file to "Allow: /".
+User-agent: *
+Allow: /
+
+Sitemap: https://contractor.virellionapex.com/sitemap.xml
